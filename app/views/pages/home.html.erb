@@ -1,8 +1,12 @@
 
 <h1>Home</h1>
-<div id="map_canvas" style="width:70%; height:80%"></div>
+<div id="map_canvas" style="width:50%; height:70%"></div>
 
 <footer>
   <%= javascript_include_tag "create_map" %>
   <%= javascript_include_tag "get_tweets" %>
+  <%= @list %> <br>
+  <%= @members %> <br>
+  <%= @tweets[0].geo.coordinates %> <br>
   <%= @tweets %>
+</footer>

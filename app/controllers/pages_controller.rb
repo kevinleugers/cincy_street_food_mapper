@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @tweets = Twitter.user_timeline("kleugs513")
+    @tweets = Twitter.list_timeline("cincy-street-food-vendors")
   end
 
   def help

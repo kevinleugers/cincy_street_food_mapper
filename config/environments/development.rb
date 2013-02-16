@@ -34,9 +34,4 @@ CincyStreetFoodMapper::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  ENV['TWITTER_CONSUMER_KEY'] = "8F7jRbcQpDlnYY2AWDz5ZA"
-  ENV['TWITTER_CONSUMER_SECRET'] = "711cv8erOW4GSSBlBcG9JGG4g3h0eu2QYraWwv0"
-  ENV['TWITTER_OAUTH_TOKEN'] = "19960234-sPBOFtMYBGeOHFUAxhMgxebWxw5H7Ku3lMbFtla6i"
-  ENV['TWITTER_OAUTH_TOKEN_SECRET'] = "qePKVXYEgac5XV13SdwcKcb3hiQSKp9FstwKUbZA4"
 end

@@ -1,9 +1,6 @@
-function addMarker() {
-  for(i=0, i<tweets.length, i++){
-    marker = new google.maps.Marker({
-      map: map,
-      title: tweets[i].screen_name,
-      position: new google.maps.LatLng(34.12970142, -84.50935856)
-    });
-  };
-};
+
+  var marker1 = new google.maps.Marker({
+    map: window.map,
+    position: new google.maps.LatLng(39.102005, -84.51595879)
+  });
+  marker1.setAnimation(google.maps.Animation.DROP);

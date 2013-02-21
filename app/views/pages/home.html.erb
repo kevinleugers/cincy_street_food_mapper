@@ -4,10 +4,9 @@
 
 <footer>
   <%= javascript_tag do %>
-    window.data = <%= raw @tweets.to_json %>
+    var tweets = <%= raw @tweets.to_json %>;
   <% end %>
   <%= javascript_include_tag "create_map" %>
-  <%= javascript_include_tag "set_markers" %>
   <%= @list %> <br>
   <%= @members %> <br>
 
@@ -17,7 +16,5 @@
   <%= t.user.screen_name %>
   <%= t.geo.coordinates %><br>
   <% end %><br>
-  <%= javascript_tag do %>
-    window.tweets = <%= raw @tweets.to_json %>
-  <% end %>
+
 </footer>

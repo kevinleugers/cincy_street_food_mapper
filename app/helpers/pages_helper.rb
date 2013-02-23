@@ -1,26 +1,28 @@
 module PagesHelper
 
-  def get_members
-    @list = Twitter.list_members("cincy-street-food-vendors")
-    @members = []
-    @list.each do |l|
-      @members << l.screen_name
-    end
-    return @members
+ # def get_members
+  #  @list = Twitter.list_members("cincy-street-food-vendors")
+  #  @list.each do |l|
+   #   @members << l.screen_name
+    #end
+    #return @members
+  #end
+  def get_list
+    @list = Twitter.list_timeline("cincy-street-food-vendors")
+    return @list
   end
-
-  def get_tweets(members)
+  
+  def get_tweets(list)
     @tweets = []
-    members.each do |member|
-      timeline = Twitter.user_timeline(member)
-      timeline.each do |tweet|
-        if tweet.geo
-          @tweets << tweet
+    @list.each do |l|
+      if l.geo
+        @tweets << l
           break
-        end
       end
     end
     return @tweets
   end
+
+  
 
 end

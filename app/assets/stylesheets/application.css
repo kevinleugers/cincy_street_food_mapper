@@ -12,3 +12,13 @@
  *= require bootstrap_and_overrides
  *= require_tree .
  */
+body {
+  width: 90%;
+}
+
+#main {
+  padding-top:80px;
+}
+.navbar-inner {
+  padding-bottom: 20px;
+}

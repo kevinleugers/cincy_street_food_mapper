@@ -1,29 +1,27 @@
-<div id="main" class="row-fluid">
-<div class="span8" style="height: 800px">
-  <div id="map_canvas" style="width:80%; height:70%"></div>
-  <br>
-</div>
-<div class="span4">
-<a class="twitter-timeline" href="https://twitter.com/Kleugs513/cincy-street-food-vendors" data-widget-id="302794909528752129">Tweets from @Kleugs513/cincy-street-food-vendors</a>
+<div id="head">
+  <%= link_to "cincy street food map", root_path, id: "logo" %>
 </div>
 
+<div id="main" class="section group">
+
+  <div class="col span_2_of_3">
+    <div id="map_canvas"></div>
+    <br>
+  </div>
+
+  <div class="col span_1_of_3">
+    <a class="twitter-timeline" href="https://twitter.com/Kleugs513/cincy-street-food-vendors" data-widget-id="302794909528752129">Tweets from @Kleugs513/cincy-street-food-vendors</a>
+  </div>
+  Test
 </div>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<footer>
 
+<footer>
   <%= javascript_tag do %>
     var tweets = <%= raw @tweets.to_json %>;
   <% end %>
-  <%= @list %> <br>
   <%= javascript_include_tag "create_map" %>
-
-  <%= @tweets %>
-  <br>
-  JSON: <% @tweets.each do |t| %>
-  <%= t.user.screen_name %>
-  <%= t.geo.coordinates %><br>
-  <% end %><br>
-
-
+  <!--<%= render 'layouts/tests' %> -->
 </footer>

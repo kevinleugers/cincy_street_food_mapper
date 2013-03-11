@@ -10,19 +10,13 @@
       body { height: 100%; margin: 0; padding: 0 }
       #map_canvas { height: 100% }
     </style>
-
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Chela+One">
 
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand">Cincy Street Food Map</a>
-      </div>
-    </div>
-  </div>
+  
 <%= yield %>
 </body>
 </html>

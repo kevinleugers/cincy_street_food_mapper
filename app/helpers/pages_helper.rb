@@ -20,6 +20,7 @@ module PagesHelper
           break
       end
     end
+    Rails.cache.write("cached_tweets", @tweets, :expires_in => 5.minutes)
     return @tweets
   end
 

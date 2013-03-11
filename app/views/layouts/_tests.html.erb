@@ -1,0 +1,16 @@
+<h2><%= @cache %></h2>
+<b>Results:</b> <%= @cache_results %><br>
+<b>End results</b>
+<% if @cache == true %>
+<h1>CACHED!</h1>
+<% end %>
+<br>
+<%= @list %> <br>
+
+<%= @tweets %>
+<br>
+JSON: <% @tweets.each do |t| %>
+<%= t.user.screen_name %><br>
+<%= t.profile_image_url %><br>
+<%= t.geo.coordinates %><br>
+<% end %><br>

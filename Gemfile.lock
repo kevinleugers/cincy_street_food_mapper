@@ -82,8 +82,6 @@ GEM
     multipart-post (1.1.5)
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
-    pg (0.12.2)
-    pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -168,7 +166,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   jquery-rails
-  pg
   rails (= 3.2.12)
   rspec-rails
   sass-rails (~> 3.2.3)

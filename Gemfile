@@ -6,6 +6,7 @@ gem 'twitter', '~> 4.5.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do

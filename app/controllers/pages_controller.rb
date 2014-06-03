@@ -1,10 +1,9 @@
 class PagesController < ApplicationController
-  include PagesHelper
 
   def home
    # @members = get_members
-    if Rails.cache.read("cached_tweets") 
-      @tweets = Rails.cache.read("cached_tweets") 
+    if Rails.cache.read("cached_tweets")
+      @tweets = Rails.cache.read("cached_tweets")
       @cache = true
     else
       @parser = TweetParser.new
